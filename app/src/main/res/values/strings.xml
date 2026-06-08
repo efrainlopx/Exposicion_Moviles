@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Graficos Android Demo</string>
     <string name="home_title">Exposicion de graficos en Android</string>
-    <string name="home_subtitle">Cada boton abre un ejemplo corto del temario. La idea es mostrar el concepto sin meterse en demos complejas.</string>
-    <string name="board_title">Tablon de 14 temas</string>
+    <string name="home_subtitle">Cada boton abre un ejemplo corto del temario. La idea es mostrar como se aplicaria cada tema dentro de una app real.</string>
+    <string name="board_title">Tablon de 12 temas</string>
     <string name="topic_detail_title">Detalle del tema</string>
-    <string name="key_points_title">Puntos clave</string>
+    <string name="key_points_title">Ejemplos de aplicacion</string>
     <string name="logic_files_title">Archivos de logica</string>
     <string name="xml_files_title">Archivos XML</string>
     <string name="topic_not_found">Tema no encontrado</string>

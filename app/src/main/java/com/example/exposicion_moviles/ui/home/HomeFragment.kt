@@ -1,11 +1,13 @@
-﻿package com.example.exposicion_moviles.ui.home
+package com.example.exposicion_moviles.ui.home
 
+import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
+import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.core.view.setMargins
 import androidx.fragment.app.Fragment
@@ -37,20 +39,42 @@ class HomeFragment : Fragment() {
 
     private fun renderBoard(topics: List<Topic>) {
         val margin = resources.getDimensionPixelSize(R.dimen.board_item_margin)
-        topics.forEach { topic ->
+        val buttonPalettes = listOf(
+            ButtonPalette(R.color.board_blue, R.color.white),
+            ButtonPalette(R.color.board_orange, R.color.white),
+            ButtonPalette(R.color.board_red, R.color.white),
+            ButtonPalette(R.color.board_violet, R.color.white),
+            ButtonPalette(R.color.board_teal, R.color.white),
+            ButtonPalette(R.color.board_green, R.color.white),
+            ButtonPalette(R.color.board_rose, R.color.white),
+            ButtonPalette(R.color.board_cyan, R.color.white),
+            ButtonPalette(R.color.board_indigo, R.color.white),
+            ButtonPalette(R.color.board_gold, R.color.white),
+            ButtonPalette(R.color.board_brown, R.color.white),
+            ButtonPalette(R.color.board_slate, R.color.white),
+            ButtonPalette(R.color.board_lime, R.color.white),
+        )
+
+        topics.forEachIndexed { index, topic ->
+            val palette = buttonPalettes[index % buttonPalettes.size]
             val button = MaterialButton(
                 requireContext(),
                 null,
-                com.google.android.material.R.attr.materialButtonOutlinedStyle,
+                com.google.android.material.R.attr.materialButtonStyle,
             ).apply {
                 text = "${topic.number}. ${topic.buttonLabel}"
                 isAllCaps = false
                 gravity = Gravity.CENTER
                 insetTop = 0
                 insetBottom = 0
+                strokeWidth = 0
                 minimumHeight = resources.getDimensionPixelSize(R.dimen.board_button_min_height)
                 val padding = resources.getDimensionPixelSize(R.dimen.board_button_padding)
                 setPaddingRelative(padding, padding, padding, padding)
+                backgroundTintList = ColorStateList.valueOf(
+                    ContextCompat.getColor(context, palette.backgroundRes),
+                )
+                setTextColor(ContextCompat.getColor(context, palette.textRes))
                 setOnClickListener {
                     findNavController().navigate(
                         R.id.action_homeFragment_to_topicDetailFragment,
@@ -74,4 +98,9 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    private data class ButtonPalette(
+        val backgroundRes: Int,
+        val textRes: Int,
+    )
 }

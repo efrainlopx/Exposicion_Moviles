@@ -1,19 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/canvasModeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:checkedButton="@id/canvasLineButton">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/canvasLineButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Linea" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/canvasRectButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rectangulo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/canvasCircleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Circulo" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
     <TextView
+        android:id="@+id/canvasSizeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Demo simple de drawLine, drawRect, drawCircle y drawText"
+        android:layout_marginTop="16dp"
+        android:text="Tamano: 140"
         android:textColor="@color/palette_text_primary"
         android:textStyle="bold" />
 
-    <com.example.exposicion_moviles.ui.topic.views.CanvasDemoView
+    <SeekBar
+        android:id="@+id/canvasSizeSeekBar"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="wrap_content"
+        android:max="180"
+        android:progress="80" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/canvasClearButton"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Limpiar" />
+
+    <com.example.exposicion_moviles.ui.topic.views.CanvasDemoView
+        android:id="@+id/canvasBoard"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
         android:layout_marginTop="16dp"
         android:background="@color/palette_demo_surface" />
 </LinearLayout>

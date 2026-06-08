@@ -13,4 +13,23 @@
     <color name="palette_outline">#D4DCE8</color>
     <color name="palette_text_primary">#10213A</color>
     <color name="palette_text_secondary">#516072</color>
+    <color name="switch_off_fill">#E5EAEE</color>
+    <color name="switch_off_stroke">#CCD4DB</color>
+    <color name="switch_blue">#3498DB</color>
+    <color name="switch_red">#EF4B3F</color>
+    <color name="switch_yellow">#F5AD08</color>
+    <color name="switch_green">#7ED400</color>
+    <color name="board_blue">#2563EB</color>
+    <color name="board_orange">#F97316</color>
+    <color name="board_red">#DC2626</color>
+    <color name="board_violet">#7C3AED</color>
+    <color name="board_teal">#0F766E</color>
+    <color name="board_green">#16A34A</color>
+    <color name="board_rose">#E11D48</color>
+    <color name="board_cyan">#0891B2</color>
+    <color name="board_indigo">#4338CA</color>
+    <color name="board_gold">#CA8A04</color>
+    <color name="board_brown">#92400E</color>
+    <color name="board_slate">#334155</color>
+    <color name="board_lime">#65A30D</color>
 </resources>

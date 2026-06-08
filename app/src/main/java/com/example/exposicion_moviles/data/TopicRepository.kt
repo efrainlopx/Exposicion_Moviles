@@ -1,4 +1,4 @@
-﻿package com.example.exposicion_moviles.data
+package com.example.exposicion_moviles.data
 
 import com.example.exposicion_moviles.R
 
@@ -7,38 +7,15 @@ object TopicRepository {
 
     private val topics = listOf(
         Topic(
-            id = "overview",
-            number = 1,
-            buttonLabel = "Graficos Android",
-            title = "Graficos en Android",
-            summary = "Resume las clases base que permiten dibujar, dar estilo y mostrar recursos visuales dentro de una app Android.",
-            keyPoints = listOf(
-                "Canvas dibuja sobre una superficie.",
-                "Paint define color, grosor y estilo.",
-                "Path describe rutas y figuras complejas.",
-                "Drawable encapsula imagenes, fondos y animaciones reutilizables.",
-            ),
-            logicFiles = listOf(
-                "data/TopicRepository.kt",
-                "ui/home/HomeFragment.kt",
-                "ui/topic/TopicDetailFragment.kt",
-            ),
-            xmlFiles = listOf(
-                "res/layout/fragment_home.xml",
-                "res/layout/topic_demo_overview.xml",
-            ),
-            demoLayoutRes = R.layout.topic_demo_overview,
-        ),
-        Topic(
             id = "canvas",
             number = 2,
             buttonLabel = "Canvas",
             title = "Clase Canvas",
-            summary = "Canvas es la superficie donde se dibujan lineas, rectangulos, circulos, texto, mapas de bits y rutas.",
+            summary = "Canvas se aplica cuando necesitas dibujar algo propio dentro de la app, por ejemplo un mini tablero, un grafico o una firma digital.",
             keyPoints = listOf(
-                "Metodos comunes: drawLine, drawRect, drawCircle, drawText y drawPath.",
-                "Tambien permite transformaciones como rotate, scale y translate.",
-                "Se usa normalmente dentro de una View personalizada.",
+                "Pantallas de estadisticas con barras, lineas o marcadores personalizados.",
+                "Vistas para dibujar rutas en mapas o bocetos rapidos.",
+                "Componentes como firmas, medidores o pizarras de notas.",
             ),
             logicFiles = listOf(
                 "ui/topic/views/CanvasDemoView.kt",
@@ -54,11 +31,11 @@ object TopicRepository {
             number = 3,
             buttonLabel = "Paint",
             title = "Clase Paint",
-            summary = "Paint controla la apariencia de cada dibujo: color, grosor, estilo, transparencia y tamano del texto.",
+            summary = "Paint se usa para decidir como se vera un elemento dibujado: su color, grosor, relleno y texto, por ejemplo en indicadores o etiquetas dentro de la app.",
             keyPoints = listOf(
-                "Metodos clave: setColor, setStrokeWidth, setTextSize y setStyle.",
-                "Paint trabaja junto con Canvas.",
-                "Permite pasar de un trazo simple a una interfaz mas clara y expresiva.",
+                "Cambiar el color de alertas, progreso o estados activos.",
+                "Definir grosor en lineas de graficas o contornos de tarjetas.",
+                "Personalizar titulos y marcas dentro de componentes dibujados a mano.",
             ),
             logicFiles = listOf(
                 "ui/topic/views/PaintDemoView.kt",
@@ -74,11 +51,11 @@ object TopicRepository {
             number = 4,
             buttonLabel = "Path",
             title = "Clase Path",
-            summary = "Path permite crear rutas, curvas y figuras compuestas que luego Canvas puede dibujar con un Paint.",
+            summary = "Path sirve cuando la app necesita figuras no tan simples, como flechas, rutas, ondas o iconos hechos a medida.",
             keyPoints = listOf(
-                "Sirve para figuras que no son rectangulos ni circulos simples.",
-                "Se combina con moveTo, lineTo y quadTo para rutas personalizadas.",
-                "Es util para iconos, graficas y trazos organicos.",
+                "Flechas o conectores en tutoriales paso a paso.",
+                "Lineas curvas en mapas, seguimiento de pedidos o recorrido de usuario.",
+                "Formas personalizadas en dashboards o encabezados decorativos.",
             ),
             logicFiles = listOf(
                 "ui/topic/views/PathDemoView.kt",
@@ -90,35 +67,15 @@ object TopicRepository {
             demoLayoutRes = R.layout.topic_demo_path,
         ),
         Topic(
-            id = "drawable",
-            number = 5,
-            buttonLabel = "Drawable",
-            title = "Drawable y subclases",
-            summary = "Drawable es la base para representar recursos graficos como fondos, iconos, capas, selectores y animaciones.",
-            keyPoints = listOf(
-                "Se usa en botones, ImageView, fondos y estados visuales.",
-                "Las subclases cambian la forma de definir y reutilizar el recurso.",
-                "En esta app se muestran varias subclases separadas para compararlas rapido.",
-            ),
-            logicFiles = listOf(
-                "data/TopicRepository.kt",
-                "ui/topic/TopicDetailFragment.kt",
-            ),
-            xmlFiles = listOf(
-                "res/layout/topic_demo_drawable.xml",
-            ),
-            demoLayoutRes = R.layout.topic_demo_drawable,
-        ),
-        Topic(
             id = "bitmap",
             number = 6,
             buttonLabel = "BitmapDrawable",
             title = "BitmapDrawable",
-            summary = "BitmapDrawable muestra imagenes raster como PNG, JPG o WEBP. Es ideal para fotos o imagenes con mucho detalle.",
+            summary = "BitmapDrawable se usa cuando la app muestra imagenes reales como fotos de producto, banners, miniaturas o portadas descargadas.",
             keyPoints = listOf(
-                "Ofrece buena fidelidad visual.",
-                "Puede consumir mas memoria que un vector.",
-                "Normalmente requiere variantes por densidad de pantalla.",
+                "Galerias, perfiles de usuario o catalogos con fotografias.",
+                "Banners promocionales con arte final ya exportado.",
+                "Miniaturas de video, noticias o publicaciones sociales.",
             ),
             logicFiles = listOf(
                 "ui/topic/TopicDemoBinder.kt",
@@ -133,11 +90,11 @@ object TopicRepository {
             number = 7,
             buttonLabel = "VectorDrawable",
             title = "VectorDrawable",
-            summary = "VectorDrawable define graficos escalables en XML. Es una buena opcion para iconos y formas simples.",
+            summary = "VectorDrawable se aplica en iconos de menu, barras de navegacion y botones donde se necesita que el diseno se vea nitido en cualquier tamano.",
             keyPoints = listOf(
-                "No pierde calidad al cambiar de tamano.",
-                "Reduce la necesidad de multiples imagenes por densidad.",
-                "No es la mejor opcion para fotos o ilustraciones complejas.",
+                "Iconos de inicio, buscar, ajustes o favoritos.",
+                "Logotipos simples que deben escalar sin perder calidad.",
+                "Elementos graficos pequenos que se repiten en muchas pantallas.",
             ),
             logicFiles = listOf(
                 "ui/topic/TopicDemoBinder.kt",
@@ -153,11 +110,11 @@ object TopicRepository {
             number = 8,
             buttonLabel = "LayerDrawable",
             title = "LayerDrawable",
-            summary = "LayerDrawable combina varios drawables en capas para construir fondos y composiciones sin usar una imagen pesada.",
+            summary = "LayerDrawable se usa para combinar varias capas en un mismo recurso, por ejemplo una tarjeta con fondo, borde e indicador de notificacion.",
             keyPoints = listOf(
-                "Cada capa se dibuja en orden.",
-                "Sirve para iconos con indicadores, bordes o sombras ligeras.",
-                "Demasiadas capas pueden volver dificil el mantenimiento.",
+                "Badges sobre iconos de mensajes o avisos.",
+                "Tarjetas con sombra, borde e ilustracion superpuesta.",
+                "Estados premium, nuevos o destacados sin exportar una imagen distinta por cada caso.",
             ),
             logicFiles = listOf(
                 "ui/topic/TopicDemoBinder.kt",
@@ -173,11 +130,11 @@ object TopicRepository {
             number = 9,
             buttonLabel = "StateListDrawable",
             title = "StateListDrawable",
-            summary = "StateListDrawable cambia la apariencia de un componente segun su estado: presionado, habilitado o seleccionado.",
+            summary = "StateListDrawable se aplica en botones y controles que deben cambiar visualmente al presionarse, seleccionarse o deshabilitarse.",
             keyPoints = listOf(
-                "Es clave para botones e interfaces interactivas.",
-                "Evita programar cambios visuales manuales en cada toque.",
-                "Cada estado importante debe declararse para evitar saltos raros.",
+                "Botones de enviar, comprar o iniciar sesion con respuesta visual al toque.",
+                "Pestanas o menus que marcan la opcion actual.",
+                "Switches y filtros que necesitan mostrar si estan activos o inactivos.",
             ),
             logicFiles = listOf(
                 "ui/topic/TopicDemoBinder.kt",
@@ -195,11 +152,11 @@ object TopicRepository {
             number = 10,
             buttonLabel = "GradientDrawable",
             title = "GradientDrawable",
-            summary = "GradientDrawable crea fondos simples con color, gradientes, bordes y esquinas redondeadas desde XML.",
+            summary = "GradientDrawable se usa para crear fondos modernos en botones, encabezados, tarjetas o llamadas a la accion sin depender de imagenes externas.",
             keyPoints = listOf(
-                "Es util para tarjetas, botones y cajas de texto.",
-                "Evita exportar imagenes para fondos sencillos.",
-                "Se limita a formas basicas como rectangulos, ovalos y lineas.",
+                "Botones principales con degradado para resaltar acciones.",
+                "Encabezados o banners con color mas llamativo.",
+                "Tarjetas promocionales con esquinas redondeadas y borde integrado.",
             ),
             logicFiles = listOf(
                 "ui/topic/TopicDemoBinder.kt",
@@ -215,11 +172,11 @@ object TopicRepository {
             number = 11,
             buttonLabel = "ShapeDrawable",
             title = "ShapeDrawable",
-            summary = "ShapeDrawable permite dibujar formas simples desde codigo y cambiar su Paint sin necesitar una imagen externa.",
+            summary = "ShapeDrawable se aplica cuando la app necesita crear formas desde codigo, por ejemplo chips, marcadores o decoraciones dinamicas segun datos del usuario.",
             keyPoints = listOf(
-                "Puede usar ovalos, rectangulos y formas redondeadas.",
-                "Es bueno para demos pequenos o decoraciones dinamicas.",
-                "Ayuda a mostrar la diferencia entre forma y contenido grafico.",
+                "Etiquetas de categoria generadas al vuelo.",
+                "Marcadores de estado como disponible, ocupado o completado.",
+                "Decoraciones simples que cambian segun el tema o los datos cargados.",
             ),
             logicFiles = listOf(
                 "ui/topic/views/ShapeDrawableDemoView.kt",
@@ -235,11 +192,11 @@ object TopicRepository {
             number = 12,
             buttonLabel = "TransitionDrawable",
             title = "TransitionDrawable",
-            summary = "TransitionDrawable anima la transicion entre dos drawables, por ejemplo entre dos fondos o estados visuales.",
+            summary = "TransitionDrawable sirve para suavizar un cambio visual, por ejemplo cuando una tarjeta cambia de estado o un panel confirma una accion.",
             keyPoints = listOf(
-                "Sirve para cambios suaves entre colores o capas.",
-                "Es una forma simple de agregar retroalimentacion visual.",
-                "La demo alterna entre dos fondos con un boton.",
+                "Transicion de pendiente a completado en tareas o pedidos.",
+                "Cambio suave de color en favoritos, likes o seleccionados.",
+                "Feedback visual despues de enviar un formulario o activar una opcion.",
             ),
             logicFiles = listOf(
                 "ui/topic/TopicDemoBinder.kt",
@@ -257,11 +214,11 @@ object TopicRepository {
             number = 13,
             buttonLabel = "AnimationDrawable",
             title = "AnimationDrawable",
-            summary = "AnimationDrawable reproduce una secuencia de drawables como si fueran fotogramas. Es util para animaciones cortas y didacticas.",
+            summary = "AnimationDrawable se usa para animaciones cortas cuadro por cuadro, como un loader, un icono que palpita o una reaccion visual al tocar algo.",
             keyPoints = listOf(
-                "Se define en XML con un animation-list.",
-                "Cada item es un drawable con una duracion.",
-                "La demo arranca y detiene la animacion con un boton.",
+                "Indicadores de carga o espera en procesos breves.",
+                "Mascotas, stickers o iconos con movimiento simple.",
+                "Efectos visuales pequenos para hacer la interfaz mas viva.",
             ),
             logicFiles = listOf(
                 "ui/topic/TopicDemoBinder.kt",
@@ -280,11 +237,11 @@ object TopicRepository {
             number = 14,
             buttonLabel = "colors.xml",
             title = "Archivo colors.xml",
-            summary = "colors.xml centraliza la paleta de colores de la app para reutilizarla en layouts, drawables y vistas personalizadas.",
+            summary = "colors.xml se aplica para mantener una identidad visual consistente en toda la app, por ejemplo en botones, tarjetas, fondos e indicadores.",
             keyPoints = listOf(
-                "Evita repetir codigos hexadecimales por todo el proyecto.",
-                "Hace mas facil cambiar el estilo general de la app.",
-                "En esta demo se muestran los colores principales usados por los ejemplos.",
+                "Definir el color principal de marca una sola vez.",
+                "Reutilizar colores de exito, alerta o texto en todas las pantallas.",
+                "Cambiar la apariencia global sin editar archivo por archivo.",
             ),
             logicFiles = listOf(
                 "ui/topic/TopicDemoBinder.kt",
@@ -303,3 +260,4 @@ object TopicRepository {
 
     fun findById(id: String): Topic? = topics.firstOrNull { it.id == id }
 }
+

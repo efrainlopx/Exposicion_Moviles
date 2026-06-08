@@ -1,23 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/selector_topic_button"
-        android:padding="16dp"
-        android:text="Presiona este boton"
-        android:textAllCaps="false"
-        android:textColor="@color/white" />
-
-    <TextView
+    <androidx.appcompat.widget.SwitchCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Al presionarlo cambia el color porque el fondo es un selector por estado."
-        android:textColor="@color/palette_text_secondary" />
+        android:checked="false"
+        android:layout_marginBottom="14dp"
+        android:showText="false"
+        android:switchMinWidth="132dp"
+        android:thumb="@drawable/switch_thumb"
+        android:thumbTextPadding="0dp"
+        app:track="@drawable/switch_track_blue" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_marginBottom="14dp"
+        android:showText="false"
+        android:switchMinWidth="132dp"
+        android:thumb="@drawable/switch_thumb"
+        android:thumbTextPadding="0dp"
+        app:track="@drawable/switch_track_red" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:layout_marginBottom="14dp"
+        android:showText="false"
+        android:switchMinWidth="132dp"
+        android:thumb="@drawable/switch_thumb"
+        android:thumbTextPadding="0dp"
+        app:track="@drawable/switch_track_yellow" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:showText="false"
+        android:switchMinWidth="132dp"
+        android:thumb="@drawable/switch_thumb"
+        android:thumbTextPadding="0dp"
+        app:track="@drawable/switch_track_green" />
+
 </LinearLayout>

@@ -1,19 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/pathModeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:checkedButton="@id/pathTriangleButton">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pathTriangleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Triangulo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pathCurveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Curva" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pathWaveButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ola" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
     <TextView
+        android:id="@+id/pathSizeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Demo de una figura cerrada y una curva creadas con Path"
+        android:layout_marginTop="16dp"
+        android:text="Tamano: 140"
         android:textColor="@color/palette_text_primary"
         android:textStyle="bold" />
 
-    <com.example.exposicion_moviles.ui.topic.views.PathDemoView
+    <SeekBar
+        android:id="@+id/pathSizeSeekBar"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="wrap_content"
+        android:max="180"
+        android:progress="80" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pathClearButton"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Limpiar" />
+
+    <com.example.exposicion_moviles.ui.topic.views.PathDemoView
+        android:id="@+id/pathBoard"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
         android:layout_marginTop="16dp"
         android:background="@color/palette_demo_surface" />
 </LinearLayout>
