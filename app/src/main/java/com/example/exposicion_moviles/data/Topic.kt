@@ -11,5 +11,6 @@ data class Topic(
     val keyPoints: List<String>,
     val logicFiles: List<String>,
     val xmlFiles: List<String>,
+    val usedApis: List<String>,
     @LayoutRes val demoLayoutRes: Int,
 )

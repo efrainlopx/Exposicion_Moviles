@@ -24,6 +24,10 @@ object TopicRepository {
             xmlFiles = listOf(
                 "res/layout/topic_demo_canvas.xml",
             ),
+            usedApis = listOf(
+                "Clase Canvas para dibujar sobre la vista.",
+                "Metodos drawLine(), drawRect() y drawCircle().",
+            ),
             demoLayoutRes = R.layout.topic_demo_canvas,
         ),
         Topic(
@@ -43,6 +47,10 @@ object TopicRepository {
             ),
             xmlFiles = listOf(
                 "res/layout/topic_demo_paint.xml",
+            ),
+            usedApis = listOf(
+                "Clase Paint para color, relleno, borde y texto.",
+                "Paint.Style.FILL, STROKE y drawText().",
             ),
             demoLayoutRes = R.layout.topic_demo_paint,
         ),
@@ -64,6 +72,10 @@ object TopicRepository {
             xmlFiles = listOf(
                 "res/layout/topic_demo_path.xml",
             ),
+            usedApis = listOf(
+                "Clase Path para construir figuras personalizadas.",
+                "Metodos moveTo(), lineTo(), quadTo() y cubicTo().",
+            ),
             demoLayoutRes = R.layout.topic_demo_path,
         ),
         Topic(
@@ -82,6 +94,10 @@ object TopicRepository {
             ),
             xmlFiles = listOf(
                 "res/layout/topic_demo_bitmap.xml",
+            ),
+            usedApis = listOf(
+                "BitmapDrawable desde un recurso JPG.",
+                "ImageView con android:src para mostrar la imagen.",
             ),
             demoLayoutRes = R.layout.topic_demo_bitmap,
         ),
@@ -103,6 +119,10 @@ object TopicRepository {
                 "res/layout/topic_demo_vector.xml",
                 "res/drawable/ic_vector_demo.xml",
             ),
+            usedApis = listOf(
+                "VectorDrawable definido con XML vector.",
+                "PathData para dibujar formas escalables.",
+            ),
             demoLayoutRes = R.layout.topic_demo_vector,
         ),
         Topic(
@@ -122,6 +142,10 @@ object TopicRepository {
             xmlFiles = listOf(
                 "res/layout/topic_demo_layer.xml",
                 "res/drawable/layer_badge.xml",
+            ),
+            usedApis = listOf(
+                "LayerDrawable usando <layer-list>.",
+                "Items superpuestos con gravity e inset.",
             ),
             demoLayoutRes = R.layout.topic_demo_layer,
         ),
@@ -145,6 +169,10 @@ object TopicRepository {
                 "res/drawable/bg_state_default.xml",
                 "res/drawable/bg_state_pressed.xml",
             ),
+            usedApis = listOf(
+                "StateListDrawable usando <selector>.",
+                "Estado state_checked para cambiar el track del switch.",
+            ),
             demoLayoutRes = R.layout.topic_demo_state_list,
         ),
         Topic(
@@ -165,6 +193,10 @@ object TopicRepository {
                 "res/layout/topic_demo_gradient.xml",
                 "res/drawable/gradient_demo.xml",
             ),
+            usedApis = listOf(
+                "GradientDrawable definido con <shape>.",
+                "Propiedades gradient, corners y stroke.",
+            ),
             demoLayoutRes = R.layout.topic_demo_gradient,
         ),
         Topic(
@@ -184,6 +216,10 @@ object TopicRepository {
             ),
             xmlFiles = listOf(
                 "res/layout/topic_demo_shape.xml",
+            ),
+            usedApis = listOf(
+                "ShapeDrawable creado desde codigo Kotlin.",
+                "OvalShape y RoundRectShape para formas simples.",
             ),
             demoLayoutRes = R.layout.topic_demo_shape,
         ),
@@ -206,6 +242,10 @@ object TopicRepository {
                 "res/drawable/transition_topic_demo.xml",
                 "res/drawable/transition_start.xml",
                 "res/drawable/transition_end.xml",
+            ),
+            usedApis = listOf(
+                "TransitionDrawable para pasar entre dos fondos.",
+                "Metodos startTransition() y reverseTransition().",
             ),
             demoLayoutRes = R.layout.topic_demo_transition,
         ),
@@ -230,6 +270,10 @@ object TopicRepository {
                 "res/drawable/anim_frame_2.xml",
                 "res/drawable/anim_frame_3.xml",
             ),
+            usedApis = listOf(
+                "AnimationDrawable con <animation-list>.",
+                "Metodos start() y stop() para controlar los frames.",
+            ),
             demoLayoutRes = R.layout.topic_demo_animation,
         ),
         Topic(
@@ -252,6 +296,10 @@ object TopicRepository {
                 "res/layout/topic_demo_colors.xml",
                 "res/values/colors.xml",
             ),
+            usedApis = listOf(
+                "Archivo colors.xml para centralizar la paleta.",
+                "Referencias @color usadas en layouts y drawables.",
+            ),
             demoLayoutRes = R.layout.topic_demo_colors,
         ),
     )
@@ -260,4 +308,3 @@ object TopicRepository {
 
     fun findById(id: String): Topic? = topics.firstOrNull { it.id == id }
 }
-

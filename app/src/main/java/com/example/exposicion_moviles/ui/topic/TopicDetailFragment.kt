@@ -42,12 +42,15 @@ class TopicDetailFragment : Fragment() {
         binding.topicIndex.text = getString(R.string.topic_number_format, topic.number)
         binding.topicTitle.text = topic.title
         TopicDemoBinder.bind(topic, layoutInflater, binding.demoContainer)
+        binding.usedApisText.text = topic.usedApis.joinToString(separator = "\n") { "- $it" }
     }
 
     private fun showMissingTopic() {
         requireActivity().title = getString(R.string.topic_not_found)
         binding.topicIndex.text = getString(R.string.topic_not_found)
         binding.topicTitle.text = getString(R.string.topic_not_found)
+        binding.usedApisTitle.visibility = View.GONE
+        binding.usedApisText.visibility = View.GONE
     }
 
     override fun onDestroyView() {

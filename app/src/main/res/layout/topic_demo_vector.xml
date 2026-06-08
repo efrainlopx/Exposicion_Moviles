@@ -5,16 +5,18 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+    <com.example.exposicion_moviles.ui.topic.views.ZoomableVectorImageView
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@color/palette_demo_surface"
         android:contentDescription="Vector demo"
+        android:padding="24dp"
         android:src="@drawable/ic_vector_demo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Un solo XML puede escalar bien en varias densidades."
+        android:text="Haz zoom con dos dedos: el vector escala sin perder calidad."
         android:textColor="@color/palette_text_secondary" />
 </LinearLayout>
