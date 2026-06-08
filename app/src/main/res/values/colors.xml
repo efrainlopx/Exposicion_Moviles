@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="palette_background">#F4F7FB</color>
+    <color name="palette_surface">#FFFFFFFF</color>
+    <color name="palette_demo_surface">#EAF0F8</color>
+    <color name="palette_primary">#2563EB</color>
+    <color name="palette_secondary">#0F172A</color>
+    <color name="palette_accent">#F97316</color>
+    <color name="palette_accent_soft">#FDBA74</color>
+    <color name="palette_ink">#1E293B</color>
+    <color name="palette_outline">#D4DCE8</color>
+    <color name="palette_text_primary">#10213A</color>
+    <color name="palette_text_secondary">#516072</color>
 </resources>

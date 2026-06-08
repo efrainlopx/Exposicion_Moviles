@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demo de ShapeDrawable creado desde codigo"
+        android:textColor="@color/palette_text_primary"
+        android:textStyle="bold" />
+
+    <com.example.exposicion_moviles.ui.topic.views.ShapeDrawableDemoView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/palette_demo_surface" />
+</LinearLayout>

@@ -1,3 +1,5 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="board_item_margin">8dp</dimen>
+    <dimen name="board_button_min_height">112dp</dimen>
+    <dimen name="board_button_padding">24dp</dimen>
 </resources>
