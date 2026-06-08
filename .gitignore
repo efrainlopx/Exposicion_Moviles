@@ -1,0 +1,18 @@
+*.iml
+
+# Gradle state
+.gradle/
+**/build/
+
+# Local SDK and machine-specific config
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+
+# Native build outputs
+.externalNativeBuild/
+.cxx/
+
+# Android captures
+captures/
